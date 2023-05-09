@@ -16,7 +16,7 @@ Desenvolvimento de uma Pokedex! <br/>
 </p>
 
 
-(![Captura da Web_9-5-2023_11502_127 0 0 1](https://github.com/Gabnns/Pokedex/assets/86312347/10d3de78-a08a-49b3-ae6d-9617e9154f2b)
+![Captura da Web_9-5-2023_11502_127 0 0 1](https://github.com/Gabnns/Pokedex/assets/86312347/10d3de78-a08a-49b3-ae6d-9617e9154f2b)
 
 
 

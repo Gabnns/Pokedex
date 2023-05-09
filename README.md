@@ -35,7 +35,7 @@ Desenvolvimento de uma Pokedex! <br/>
 
 - A Pokedex desenvolvida, conta com os 151 primeiros pokemons, o layout foi desenvolvido em Html e CSS e foi utilizado o JavaScript para pegar todas as informações da PokeAPI. O projeto em si, foi para estudar mais sobre o uso de API's e como podemos pegar as informações e mostrá-las na nossa tela de forma dinâmica.
 
-- [Visite o projeto online]()!
+- [Visite o projeto online](https://gabnns.github.io/Pokedex/)!
 
 
 ## :memo: Licença

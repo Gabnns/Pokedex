@@ -1,23 +1,20 @@
-
-
 const listaPokemon = document.querySelector("#listaPokemon");
 const btnNav = document.querySelectorAll(".btn-header");
 
 let URL = "https://pokeapi.co/api/v2/pokemon/";
 
-for (let i = 1; i <= 151; i++){
-    fetch(URL + i)
-        .then((response) => response.json())
-        .then(data => mostrarPokemon(data));
+for (let i = 1; i <= 151; i++) {
+  fetch(URL + i)
+    .then((response) => response.json())
+    .then((data) => mostrarPokemon(data));
 }
 
 function mostrarPokemon(data) {
-
-    let tipos = data.types.map((type) => `<p class="${type.type.name} type">${type.type.name}</p>
-        `);
-    tipos = tipos.join('');
-
-
+  let tipos = data.types.map(
+    (type) => `<p class="${type.type.name} type">${type.type.name}</p>
+        `
+  );
+  tipos = tipos.join("");
 
   const div = document.createElement("div");
   div.classList.add("pokemon");
@@ -35,6 +32,28 @@ function mostrarPokemon(data) {
       </div>
     </div>
     `;
-    listaPokemon.append(div);
+  listaPokemon.append(div);
 }
 
+btnNav.forEach((button) =>
+  button.addEventListener("click", (event) => {
+    const buttonId = event.currentTarget.id;
+
+    listaPokemon.innerHTML = "";
+
+    for (let i = 1; i <= 151; i++) {
+      fetch(URL + i)
+        .then((response) => response.json())
+        .then((data) => {
+          if (buttonId === "ver-todos") {
+            mostrarPokemon(data);
+          } else {
+            const tipos = data.types.map((type) => type.type.name);
+            if (tipos.some((tipo) => tipo.includes(buttonId))) {
+              mostrarPokemon(data);
+            }
+          }
+        });
+    }
+  })
+);
